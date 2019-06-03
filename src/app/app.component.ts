@@ -28,7 +28,9 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('test');
     this.payLoad = JSON.stringify(this.form.value);
+    alert(`Form saved with these data: ${this.payLoad}`);
   }
 
   toFormGroup(elements: ElementBase<any>[] ) {

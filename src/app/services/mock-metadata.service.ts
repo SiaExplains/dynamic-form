@@ -36,7 +36,7 @@ export class MockMetaDataService {
       new TextboxElement({
         key: 'lastName',
         label: 'Last name',
-        value: 'Ghanbari',
+        value: '',
         required: true,
         order: 2
       }),

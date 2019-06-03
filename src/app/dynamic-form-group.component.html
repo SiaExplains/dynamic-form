@@ -4,7 +4,7 @@
     <div [ngSwitch]="element.controlType" class="fields-container">
 
         <mat-form-field *ngSwitchCase="'textbox'" appearance="fill" class="example-full-width">
-            <input matInput placeholder="Favorite food" [formControlName]="element.key" [id]="element.key"
+            <input matInput  [formControlName]="element.key" [id]="element.key"
              [type]="element.type">
           </mat-form-field>
 
