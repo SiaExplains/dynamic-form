@@ -3,6 +3,7 @@ import { Injectable }       from '@angular/core';
 import { ElementBase }     from '../elements/element-base';
 import { DropdownElement } from '../elements/element-dropdown';
 import { TextboxElement }  from '../elements/element-textbox';
+import { CheckboxElement } from '../elements/element-checkbox';
 
 @Injectable()
 export class MockMetaDataService {
@@ -22,7 +23,7 @@ export class MockMetaDataService {
           {key: 'senior',   value: 'Senior Developer'},
           {key: 'lead', value: 'Leadership'}
         ],
-        order: 3
+        order: 4
       }),
 
       new TextboxElement({
@@ -41,11 +42,18 @@ export class MockMetaDataService {
         order: 2
       }),
 
+      new CheckboxElement({
+        key: 'married',
+        label: 'Is Married',
+        value: '',
+        order: 5
+      }),
+
       new TextboxElement({
         key: 'emailAddress',
         label: 'Email',
         type: 'email',
-        order: 4
+        order: 3
       })
     ];
 

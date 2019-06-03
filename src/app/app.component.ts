@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators }                 from '@angular/for
 
 import { ElementBase }  from './elements/element-base';
 import { MockMetaDataService } from './services/mock-metadata.service';
+import {MatIconRegistry} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +15,12 @@ import { MockMetaDataService } from './services/mock-metadata.service';
 export class AppComponent implements OnInit {
   metadata: any[];
 
-  constructor(service: MockMetaDataService) {
+  constructor(service: MockMetaDataService, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     this.metadata = service.getMockMetaData();
     this.elements = this.metadata;
+    iconRegistry.addSvgIcon(
+      'thumbs-up',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
   }
 
   @Input() elements: ElementBase<any>[] = [];

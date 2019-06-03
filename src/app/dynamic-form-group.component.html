@@ -8,9 +8,18 @@
              [type]="element.type">
           </mat-form-field>
 
-      <select [id]="element.key" *ngSwitchCase="'dropdown'" [formControlName]="element.key">
-        <option *ngFor="let opt of element.options" [value]="opt.key">{{opt.value}}</option>
-      </select>
+
+
+      <mat-form-field *ngSwitchCase="'dropdown'">
+          <mat-select [id]="element.key" [formControlName]="element.key">
+            <mat-option *ngFor="let opt of element.options" [value]="opt.key">
+                {{opt.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngSwitchCase="'checkbox'">
+            <mat-checkbox class="example-margin">Checked</mat-checkbox>
+        </div>
 
     </div>
 
