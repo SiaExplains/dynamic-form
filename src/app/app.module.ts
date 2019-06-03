@@ -3,12 +3,11 @@ import { ReactiveFormsModule }          from '@angular/forms';
 import { NgModule }                     from '@angular/core';
 
 import { AppComponent }                 from './app.component';
-import { DynamicFormComponent }         from './dynamic-form.component';
-import { DynamicFormQuestionComponent } from './dynamic-form-question.component';
+import { DynamicFormGroupComponent } from './dynamic-form-group.component';
 
 @NgModule({
   imports: [ BrowserModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, DynamicFormComponent, DynamicFormQuestionComponent ],
+  declarations: [ AppComponent,  DynamicFormGroupComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

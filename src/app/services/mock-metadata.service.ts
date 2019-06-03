@@ -1,8 +1,8 @@
 import { Injectable }       from '@angular/core';
 
-import { ElementBase }     from './elements/element-base';
-import { DropdownElement } from './elements/element-dropdown';
-import { TextboxElement }  from './elements/element-textbox';
+import { ElementBase }     from '../elements/element-base';
+import { DropdownElement } from '../elements/element-dropdown';
+import { TextboxElement }  from '../elements/element-textbox';
 
 @Injectable()
 export class MockMetaDataService {

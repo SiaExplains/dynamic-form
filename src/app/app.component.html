@@ -1,0 +1,21 @@
+<h3>Dynamic Form Renderer</h3><h6>Version 1.0.0</h6>
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+      <div *ngFor="let elm of elements" class="form-row">
+        <app-form [element]="elm" [form]="form"></app-form>
+      </div>
+
+      <div class="form-row">
+        <button type="submit" [disabled]="!form.valid">Save Form</button>
+      </div>
+    </form>
+
+    <div *ngIf="payLoad" class="form-row">
+      <hr />
+      <b>Form Saved with these following values:</b><br>
+      <br />
+      {{payLoad}}
+    </div>
+  </div>
+  <h4>Siavash Ghanbari</h4>
