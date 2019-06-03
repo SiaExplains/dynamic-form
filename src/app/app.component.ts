@@ -7,6 +7,7 @@ import { MockMetaDataService } from './services/mock-metadata.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
   providers:  [MockMetaDataService]
 })
 export class AppComponent implements OnInit {

@@ -11,6 +11,7 @@ h2, h3 {
 }
 body {
   margin: 2em;
+  background-color: #aaa;
 }
 body, input[text], button {
   color: #333;
@@ -70,3 +71,6 @@ nav a.active {
 .form-row{
   margin-top: 10px;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
